@@ -72,4 +72,9 @@ public class LecturerService {
       LOGGER.error("Error while trying to find department", e);
     }
   }
+
+  public boolean isDepartmentNameValid(String departmentName) {
+    List<String> departmentNames = departmentRepository.findAllDepartmentNames();
+    return departmentNames.contains(departmentName);
+  }
 }

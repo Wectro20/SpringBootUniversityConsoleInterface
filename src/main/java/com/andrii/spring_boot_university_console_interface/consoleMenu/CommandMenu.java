@@ -24,7 +24,7 @@ public class CommandMenu {
     if (headOfDepartmentMatcher.matches()) {
       String departmentName = headOfDepartmentMatcher.group(1);
       String headOfDepartment = lecturerService.findHeadOfDepartment(departmentName);
-      if (headOfDepartment == null) {
+      if (lecturerService.isDepartmentNameValid(departmentName)) {
         System.out.println("Head of " + departmentName + " department is " + headOfDepartment + "\n");
       }
     } else if (statisticsMatcher.matches()) {
@@ -32,7 +32,7 @@ public class CommandMenu {
       Integer assistants = lecturerService.countByDegreeAndDepartment(Degree.ASSISTANT.toString(), departmentName);
       Integer associateProfessors = lecturerService.countByDegreeAndDepartment(Degree.ASSOCIATE_PROFESSOR.toString(), departmentName);
       Integer professors = lecturerService.countByDegreeAndDepartment(Degree.PROFESSOR.toString(), departmentName);
-      if (assistants != 0 && associateProfessors != 0 && professors != 0) {
+      if (lecturerService.isDepartmentNameValid(departmentName)) {
         System.out.println("assistants - " + assistants);
         System.out.println("associate professors - " + associateProfessors);
         System.out.println("professors - " + professors + "\n");
@@ -40,13 +40,15 @@ public class CommandMenu {
     } else if (averageSalaryMatcher.matches()) {
       String departmentName = averageSalaryMatcher.group(1);
       Double avgSalary = lecturerService.findAvgSalaryByDepartmentName(departmentName);
-      if (avgSalary != null) {
+      if (lecturerService.isDepartmentNameValid(departmentName)) {
         System.out.println("The average salary of " + departmentName + " is " + avgSalary + "\n");
       }
     } else if (employeeCountMatcher.matches()) {
       String departmentName = employeeCountMatcher.group(1);
       Integer employeeCount = lecturerService.countByDepartmentName(departmentName);
-      System.out.println(employeeCount + "\n");
+      if (lecturerService.isDepartmentNameValid(departmentName)) {
+        System.out.println(employeeCount + "\n");
+      }
     } else if (globalSearchMatcher.matches()) {
       String template = globalSearchMatcher.group(1);
       List<String> foundedEmployee = lecturerService.findByTemplate(template);
