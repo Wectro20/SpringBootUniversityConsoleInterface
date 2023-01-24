@@ -1,6 +1,6 @@
-package com.andrii.springBootUniversityConsoleInterface.repository;
+package com.andrii.spring_boot_university_console_interface.repository;
 
-import com.andrii.springBootUniversityConsoleInterface.model.Department;
+import com.andrii.spring_boot_university_console_interface.model.Department;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.andrii.springBootUniversityConsoleInterface.consoleMenu;
+package com.andrii.spring_boot_university_console_interface.consoleMenu;
 
 import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;

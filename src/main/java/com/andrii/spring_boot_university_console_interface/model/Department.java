@@ -1,4 +1,4 @@
-package com.andrii.springBootUniversityConsoleInterface.model;
+package com.andrii.spring_boot_university_console_interface.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

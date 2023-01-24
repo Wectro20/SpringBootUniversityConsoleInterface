@@ -1,10 +1,9 @@
-package com.andrii.springBootUniversityConsoleInterface.service;
+package com.andrii.spring_boot_university_console_interface.service;
 
-import com.andrii.springBootUniversityConsoleInterface.exceptions.DepartmentNameNotFoundException;
-import com.andrii.springBootUniversityConsoleInterface.exceptions.HeadOfDepartmentNotFoundException;
-import com.andrii.springBootUniversityConsoleInterface.model.Department;
-import com.andrii.springBootUniversityConsoleInterface.repository.DepartmentRepository;
-import com.andrii.springBootUniversityConsoleInterface.repository.LecturerRepository;
+import com.andrii.spring_boot_university_console_interface.exceptions.DepartmentNameNotFoundException;
+import com.andrii.spring_boot_university_console_interface.exceptions.HeadOfDepartmentNotFoundException;
+import com.andrii.spring_boot_university_console_interface.repository.DepartmentRepository;
+import com.andrii.spring_boot_university_console_interface.repository.LecturerRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

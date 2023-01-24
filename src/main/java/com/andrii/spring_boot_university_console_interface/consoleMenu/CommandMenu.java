@@ -1,8 +1,7 @@
-package com.andrii.springBootUniversityConsoleInterface.consoleMenu;
+package com.andrii.spring_boot_university_console_interface.consoleMenu;
 
-import com.andrii.springBootUniversityConsoleInterface.exceptions.HeadOfDepartmentNotFoundException;
-import com.andrii.springBootUniversityConsoleInterface.model.Degree;
-import com.andrii.springBootUniversityConsoleInterface.service.LecturerService;
+import com.andrii.spring_boot_university_console_interface.model.Degree;
+import com.andrii.spring_boot_university_console_interface.service.LecturerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
